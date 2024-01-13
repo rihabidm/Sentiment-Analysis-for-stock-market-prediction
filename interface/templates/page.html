@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('static/charles-forerunner-3fPXt37X6UQ-unsplash.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%; 
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.361); /* Couleur grise semi-transparente */
+            z-index: -1;
+        }
+        h1{
+            color:white;
+            font-weight: bolder;
+            font-size: 100px;
+        }
+        h6{
+            color:white;
+            font-size: 20px;
+            font-family: Courier, monospace;
+            font-weight: lighter;
+            margin: -50px;
+        }
+        form{
+            margin-top: 100px;
+        }
+        
+        .button {
+            border: none;
+            color: #fff;
+            background-image: linear-gradient(30deg, #000000, #3a3a3a);
+            border-radius: 25px;
+            background-size: 100% auto;
+            font-family: inherit;
+            font-size: 17px;
+            padding: 1em 1.5em;
+            margin-left: -30px;
+           
+        }
+
+        .button:hover {
+            background-position: right center;
+            background-size: 200% auto;
+            -webkit-animation: pulse 2s infinite;
+            animation: pulse512 1.5s infinite;
+        }
+
+        @keyframes pulse512 {
+            0% {
+                box-shadow: 0 0 0 0 #d0d1d166;
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+            }
+        }
+        .input {
+            border-radius: 10px;
+            outline: 2px solid #070707;
+            border: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #e2e2e2;
+            outline-offset: 3px;
+            padding: 10px 1rem;
+            transition: 0.25s;
+            width: 400px;
+        }
+
+        .input:focus {
+            outline-offset: 5px;
+            background-color: #fff
+        }
+        .bg{
+            
+            background-image: url(static/levier-efficacite-energetique-batiment-1536x1152.jpg);
+            background-repeat: no-repeat;
+            background-size:100%;
+            margin:-24px -10px ;
+            
+        }
+        .propos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.695);
+            height: 615px;
+            
+        }
+        
+        .texte{
+            margin: 0 100px;
+            text-align: center;
+        }
+        .contact {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label, input.inpcont, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .inpcont, textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(25, 25, 25);
+            height: 615px;
+            margin:-24px -10px ;
+        }
+        .c1{
+            margin-right: 10%;
+            top: 0;
+            left: 0;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <h1>-BIENVENUE-</h1>
+            <h6>Mettez vos finances entre les mains d'experts</h6>
+            <form action="/ajouter_ticker" method="post">
+                <input type="text" name="search" class="input"  placeholder="Mots clés...">
+                <input type="submit" class="button" value="Rechercher">
+            </form>
+        </div>
+    
+    
+
+    <div class="bg">
+        <div class="propos">
+            <h1>-A PROPOS DE NOUS-</h1>
+            <h6 class="texte">Bienvenue chez SMA , votre partenaire de confiance pour décrypter le monde complex de la finance.<br>
+            Notre société en née de la passion de décoder l'impact des actualités sur les marchés financiers.<br>
+            Nous croyons que chaque titre d'actualité recèle une histoire qui, une fois correctement
+            interprétée, peut offrir une précieuse perspective sur les fluctuations du marché.<br>
+            Notre équipe s'est engagée à fournir des analyses de sentiment précises et opportunes. <br>Grâce à notre plateforme, nous combinons
+            la puissance de la technolologie moderne avec une expertise financière pour offer à nos utilisateurs
+            des insignts clairs et pertinents.</h6>
+        </div>
+        
+    </div>
+
+    <div class="container2">
+        <div class="c1">
+            <h2>NOUS CONTACTER</h1>
+            <h6>Si vous ronconter des problèmes , n'hésitez pas à nous contacter<br><br>info@sentimentmarketanlysis.com</h6>
+        </div class="c2">
+        <div>
+            <form class="contact"action="traitement.php" method="post">
+                <label for="email">E-mail :</label>
+                <input class='inpcont' type="email" id="email" name="email" required>
+                
+                <label for="telephone">Téléphone :</label>
+                <input class='inpcont' type="tel" id="telephone" name="telephone" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+              
+        </div>
+    </div>
+    <div>
+        
+    </div>
+</div>
+</body>
+</html>
